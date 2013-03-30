@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Test1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="bouton1">Bouton 2</string>
+    <string name="title_activity_calcl">CalclActivity</string>
+    <string name="bouton01">1</string>
+    <string name="bouton02">2</string>
+    <string name="bouton03">3</string>
+    <string name="bouton04">4</string>
+    <string name="bouton05">5</string>
+    <string name="bouton06">6</string>
+    <string name="bouton07">7</string>
+    <string name="bouton08">8</string>
+    <string name="bouton09">9</string>
+    <string name="boutonP">.</string>
+    <string name="bouton00">0</string>
+    <string name="boutonC">C</string>
+    <string name="boutonPlus">+</string>
+    <string name="boutonMoins">-</string>
+    <string name="boutonMulti">*</string>
+    <string name="boutonDiv">/</string>
+    <string name="texteResultat">0</string>
+    <string name="bouton17">=</string>
+    <string name="CE">CE</string>
+    <string name="boutonPoint">.</string>
+    <string name="boutonPFermante">)</string>
+    <string name="boutonPOuvrante">(</string>
+    <string name="valeur_zero">0</string>
+
+</resources>
