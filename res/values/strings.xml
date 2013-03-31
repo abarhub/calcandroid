@@ -29,5 +29,14 @@
     <string name="boutonPFermante">)</string>
     <string name="boutonPOuvrante">(</string>
     <string name="valeur_zero">0</string>
+    <string name="calculdatenom">Calcul sur dates</string>
+    <string name="diffdatenom">Difference date</string>
+    <string name="title_activity_calc_date">CalcDate</string>
+    <string name="datedebut">Date début :</string>
+    <string name="choisirDate">Choisir</string>
+    <string name="nombresJours">nombres jours :</string>
+    <string name="resultat">"Resultat : "</string>
+    <string name="calcul">Calcul</string>
+    <string name="calcnumbre">Calculatrice</string>
 
 </resources>

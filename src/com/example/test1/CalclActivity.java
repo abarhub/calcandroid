@@ -7,15 +7,18 @@ import com.example.test1.Token.TypeToken;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class CalclActivity extends Activity {
 
-	private static final String TAG = "MyActivityHello";
+	private static final String TAG = "CalcActivity";
 	
 	public enum EtatSaisie {Debut,Nombre,Operateur,Resultat,Erreur};
 	private String texte_courant="0";
@@ -25,12 +28,18 @@ public class CalclActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_calcl);
 		
-		init_boutons();
+		setContentView(R.layout.activity_calcl);
+
+        // Le code ci-dessous permet une initialisation correcte quelle
+        // que soit l'orientation du terminal
+ 
+        setLayout(getResources().getConfiguration().orientation);
+		
+		init_boutons(true);
 	}
 
-	private void init_boutons() {
+	private void init_boutons(boolean creation) {
 		Set<Integer> set;
 		int i;
 		set=new LinkedHashSet<Integer>();
@@ -144,13 +153,16 @@ public class CalclActivity extends Activity {
 	            }
 	        });
 		}
-		final TextView result=(TextView) findViewById(R.id.textView2);
-		final TextView result2=(TextView) findViewById(R.id.textView1);
-		etat_saisie=EtatSaisie.Debut;
-		texte_courant="0";
-		calcul_courant="";
-		result.setText(calcul_courant);
-		result2.setText(texte_courant);
+		if(creation)
+		{
+			final TextView result=(TextView) findViewById(R.id.textView2);
+			final TextView result2=(TextView) findViewById(R.id.textView1);
+			etat_saisie=EtatSaisie.Debut;
+			texte_courant="0";
+			calcul_courant="";
+			result.setText(calcul_courant);
+			result2.setText(texte_courant);
+		}
 	}
 	
 	private void ajoute(int i) {
@@ -275,4 +287,40 @@ public class CalclActivity extends Activity {
 		return true;
 	}
 
+	private void setLayout(int orientation) {
+    	// Les layouts R.layout.layoutHorizontal et R.layout.layoutVertical ci-dessous 
+    	// correspondent aux fichiers layoutHorizontal.xml et layoutVertical.xml 
+    	// définis dans le répertoire res/layout de l'arborescence projet (cf étape 
+    	// précédente).
+ 
+    	final int res = (orientation == Configuration.ORIENTATION_LANDSCAPE ? 
+    	    	    	     R.layout.activity_calcl_paysage : 
+    	    	    	     R.layout.activity_calcl);
+ 
+    	setContentView(res);
+    }
+	
+	@Override
+    public void onConfigurationChanged(Configuration newConfig) {        
+        super.onConfigurationChanged(newConfig);
+ 
+        setLayout(newConfig.orientation);
+        init_boutons(false);
+    }
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		Log.w(TAG, "menu calcactivity");
+		switch(item.getItemId())
+		{
+		case R.id.diffdate:
+			Log.w(TAG, "appel diff date");
+			return true;
+		case R.id.calcdate:
+			Log.w(TAG, "appel calc date");
+			Outils.appelActivity(this,"com.example.test1.CalcDate");
+			return true;
+		}
+		return false;
+	}
 }

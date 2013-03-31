@@ -19,12 +19,17 @@
         </activity>
         <activity
             android:name="com.example.test1.CalclActivity"
+            android:configChanges="orientation"
             android:label="@string/title_activity_calcl" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.test1.CalcDate"
+            android:label="@string/title_activity_calc_date" >
         </activity>
     </application>
 
