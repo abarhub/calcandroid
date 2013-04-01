@@ -154,6 +154,7 @@ public class CalcDate extends Activity {
 		{
 		case R.id.diffdate:
 			Log.w(TAG, "appel diff date");
+			Outils.appelActivity(this,"com.example.test1.DiffCalc");
 			return true;
 		case R.id.calcnombre:
 			Log.w(TAG, "appel calc nombre");

@@ -31,6 +31,10 @@
             android:name="com.example.test1.CalcDate"
             android:label="@string/title_activity_calc_date" >
         </activity>
+        <activity
+            android:name="com.example.test1.DiffCalc"
+            android:label="@string/title_activity_diff_calc" >
+        </activity>
     </application>
 
 </manifest>

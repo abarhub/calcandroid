@@ -1,0 +1,129 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiffCalc"
+    tools:ignore="UnknownIdInLayout" >
+
+    <TableRow
+        android:id="@+id/tableLayoutDiff1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dateDebutDiff" />
+
+    <EditText
+        android:id="@+id/dateDebutDiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date" >
+        
+
+        <requestFocus />
+    </EditText>
+
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableLayoutDiff5"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        >
+    
+    <Button
+        android:id="@+id/choixDateDebutDiff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choisirDate" />
+    
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableLayoutDiff2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    
+        
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dateFinDiff" />
+        
+        
+    <EditText
+        android:id="@+id/dateFinDiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date" />
+        
+
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableLayoutDiff6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    
+    
+    <Button
+        android:id="@+id/choixDateFinDiff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choisirDate" />
+    
+    
+    </TableRow>
+    
+    
+    <TableRow
+        android:id="@+id/tableLayoutDiff3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    
+        
+    <Button
+        android:id="@+id/calcdiff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calcul" />
+         
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableLayoutDiff4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    
+    
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resultat"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+        
+    <TextView
+        android:id="@+id/resultatDiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valeur_zero"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    
+    </TableRow>
+    
+
+</TableLayout>

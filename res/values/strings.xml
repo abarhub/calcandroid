@@ -38,5 +38,8 @@
     <string name="resultat">"Resultat : "</string>
     <string name="calcul">Calcul</string>
     <string name="calcnumbre">Calculatrice</string>
+    <string name="title_activity_diff_calc">DiffCalc</string>
+    <string name="dateDebutDiff">Date début :</string>
+    <string name="dateFinDiff">Date fin :</string>
 
 </resources>

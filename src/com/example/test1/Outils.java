@@ -26,4 +26,14 @@ public class Outils {
 		Log.w(TAG, "appel activity:appel");
 		activity.startActivity(explicit);
 	}
+
+	public static String complete(int n, int len) {
+		String s;
+		s=""+n;
+		while(s.length()<len)
+		{
+			s="0"+s;
+		}
+		return s;
+	}
 }
